@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 300px;
+    position: relative;
+    background-image: url(https://autoreview.ru/images/Article/1678/Article_167862_860_575.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform-style: preserve-3d;
+    background-position: center center;
+    .about{
+        width: 100px;
+        height: 50px;
+        padding: 30px;
+        background-color: white;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 35px;
+       font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+       font-weight: 100;
+       text-transform: uppercase;
+       position: absolute;
+       top: 50%;
+       transform-style: preserve-3d;
+       transform: translateZ(20px) scaleY(0);
+       transition: all .2s;
+       transform-origin: top;
+    }
+    &:hover{
+        box-shadow: 0px 50px 80px rgba(0,0,0,0.2);
+        .about{
+            transform: translateZ(100px) scaleY(1);
+        }
+    }
+}
